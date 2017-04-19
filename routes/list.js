@@ -10,7 +10,7 @@ module.exports = function (req, res) {
 
         var json = ``;
         for (var i = 0; i < data.length; i++) {
-            json += data[i] + `<br>`;
+            json += `<a href="./?id=${data[i]}&action=get">${data[i]}</a><br>`;
         }
         res.send(json);
     })
